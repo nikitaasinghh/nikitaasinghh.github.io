@@ -2,7 +2,14 @@
 module.exports = {
   content: ["*"],
   theme: {
-    extend: {},
+    // fontFamily: {
+    //   Macondo : ['Macondo', 'cursive']
+    // },
+    extend: {
+      backgroundImage: {
+        'greyy': "url('/grey-bg.jpg')",
+      },
+    },
   },
   plugins: [],
 }
