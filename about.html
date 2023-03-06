@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-black text-white h-full w-full bg-[url('/static/grey-bg.jpg')] bg-cover fixed">
-    <nav class="mt-5 h-14 bg-black p-3 rounded-full">
+<body class="bg-black text-white h-auto w-full bg-[url('/static/grey-bg.jpg')] fixed z-0 bg-cover overflow-y-scroll">
+    <nav class="mt-5 h-16 bg-black p-3 rounded-full">
         <p class="mx-5 text-white font-medium float-left text-4xl mt-0 pb-1">Nikita Singh</p>
         <ul class="flex flex-row float-right">
           <li class="mx-5 ml-0 p-1 text-white font-medium text-xl hover:border-b-2 border-green-400 cursor-pointer">Home</li>
@@ -20,17 +20,33 @@
           <li class="mx-5 text-xl p-1 text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Portfolio</li>
         </ul>
       </nav>
-    <div class="bg-black text-white h-5/6 w-5/6 m-auto my-20 opacity-75">
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
-        <p>fhf</p>
+    <div class="bg-black text-white h-5/6 w-5/6 m-auto my-20 opacity-75 overflow-y-scroll">
+        <p class="text-xl font-semibold ml-4 p-4">ABOUT</p><hr class="w-44 ml-4">
+        <br>
+        <div class="flex flex-row justify-evenly">
+          <div class="flex flex-row justify-evenly">
+            <ul>
+              <li>Birthday:</li>
+              <li>Website: </li>
+              <li>Phone:</li>
+              <li>City: </li>
+            </ul>
+            <ul>
+              <li>Age:</li>
+              <li>Degree:</li>
+              <li>Email:</li>
+              <li>Skills:</li>
+            </ul>
+            
+          </div>
+          <div>
+            <img src="/static/myPhoto.jpeg" class="w-80 h-[22 rem]" alt="">
+          </div>
+        </div>
     </div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni odio dicta, voluptatem, aliquid in, neque excepturi vel cum tempore optio explicabo temporibus iusto adipisci? Vero, in quaerat consectetur laudantium ipsum sit corrupti dicta laboriosam, molestias veniam quis odit? Facilis?</div>
+    
+    
     
 </body>
 </html>
