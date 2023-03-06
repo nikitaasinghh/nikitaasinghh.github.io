@@ -7,7 +7,7 @@ module.exports = {
     // },
     extend: {
       backgroundImage: {
-        'greyy': "url('/grey-bg.jpg')",
+        'greyy': "url('/static/grey-bg.jpg')",
       },
     },
   },
