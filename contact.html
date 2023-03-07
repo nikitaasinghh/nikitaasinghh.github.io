@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-black text-white  h-auto w-full bg-[url('/static/grey-bg.jpg')] z-0 bg-cover overflow-scroll">
+<body class="bg-black text-white  h-auto w-full bg-[url('/static/grey-bg.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
     <nav class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[3.5%] pt-[1.5%]">
         <p class="mx-5  text-white font-medium float-left text-4xl">Nikita Singh</p>
         <ul class="flex flex-row float-right">
@@ -20,35 +20,44 @@
           <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Portfolio</li>
         </ul>
       </nav>
-    <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 opacity-75 p-6 rounded-2xl">
+    <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
         <p class="text-3xl font-bold ml-4 p-4 text-[#bef264]">CONTACT</p><hr class="w-[40%] ml-4">
         <br>
-        <div class="flex flex-row justify-evenly border-2 border-sky-500 p-[1%]">
-          <div class="flex flex-col border-2 border-l-white w-[40%]">
-            <p class="border-2 border-red-500 bg-[#1e293b] font-bold m-[4%] p-[5%] text-[150%]">My Address <span class="font-medium block text-[80%]">hjsdjdvshj</span></p>
-            <p class="border-2 border-red-500 bg-[#1e293b] font-bold m-[4%] p-[5%] text-[150%]">Email Me <span class="font-medium block text-[80%]">nikitasingh.1022@gmail.com</span></p>
+        <div class="flex flex-row justify-evenly p-[1%]">
+          <div class="flex flex-col w-[40%] my-auto">
+            <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264]">My Address <span class="font-medium block text-[80%] text-white">D1/68, Barauni Refinery Township, Begusarai, Bihar</span></p>
+            <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264]">Email Me <span class="font-medium block text-[80%] text-white">nikitasingh.1022@gmail.com</span></p>
           </div>
-          <div class="flex flex-col border-2 border-l-white w-[40%]">
-            <p class="border-2 border-red-500 bg-[#1e293b] font-bold m-[4%] p-[5%] text-[150%] leading-10">Social Profiles <span class="font-medium block text-[80%] fa fa-instagram mx-[7%]"> <span class="fa fa-linkedin mx-[8%]"></span><span class="fa fa-twitter mx-[6%]"></span></span></p>
-            <p class="border-2 border-red-500 bg-[#1e293b] font-bold m-[4%] p-[5%] text-[150%]">Call Me <span class="font-medium block text-[80%] ">+91 9006445884</span></p>
+          <div class="flex flex-col w-[40%] my-auto">
+            <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] leading-[180%] text-[#bef264]">Social Profiles <span class="font-medium block text-[80%] fa fa-instagram mx-[7%] text-white"> <span class="fa fa-linkedin ml-[8%] "></span><span class="fa fa-twitter ml-[8%]"></span></span></p>
+            <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264]">Call Me <span class="font-medium block text-[80%] text-white">+91 9006445884</span></p>
           </div>
         </div>
         <br>
-        <p class="leading-[225%] text-[115%]">Hi, my name is Nikita Singh and I'm a beginner web developer with a passion for creating responsive and user-friendly websites. I've completed several online courses and tutorials on HTML, CSS, and JavaScript, and I'm excited to apply my skills to real-world projects. My goal is to gain hands-on experience and grow as a developer, while delivering high-quality work to my clients. I'm eager to work on projects that challenge me and help me expand my skill set. I believe in collaboration and communication, and I'm committed to delivering projects on time and within budget. I'm proficient in HTML, CSS, and JavaScript, and I'm eager to learn more about React and other frameworks. I want to build websites that not only look great, but also provide a seamless user experience. I'm open to feedback and always looking for ways to improve and looking for opportunities to grow, develop and learn.</p>
+        <!-- <p class="leading-[225%] text-[115%]">Hi, my name is Nikita Singh and I'm a beginner web developer with a passion for creating responsive and user-friendly websites. I've completed several online courses and tutorials on HTML, CSS, and JavaScript, and I'm excited to apply my skills to real-world projects. My goal is to gain hands-on experience and grow as a developer, while delivering high-quality work to my clients. I'm eager to work on projects that challenge me and help me expand my skill set. I believe in collaboration and communication, and I'm committed to delivering projects on time and within budget. I'm proficient in HTML, CSS, and JavaScript, and I'm eager to learn more about React and other frameworks. I want to build websites that not only look great, but also provide a seamless user experience. I'm open to feedback and always looking for ways to improve and looking for opportunities to grow, develop and learn.</p> -->
+        <div class="py-[5%] pt-[2%] pb-[3%] mt-[2%] border-2 border-red-400 rounded-lg">
+          <form action="#" method="post">
+            <div class="flex flex-row  justify-evenly  m-[2%]">
+              <div class="inline-block w-[45%] text-center">
+                 <input type="text" name="Name" placeholder="Your Name" class="inline w-[100%] p-[3.5%]  bg-[#212225]">
+              </div>
+              <div class="inline-block w-[45%] text-center">
+                <input type="email" name="email" placeholder="Your Email" class="inline w-[100%] p-[3.5%]  bg-[#212225] ">
+              </div>
+            </div>
+            <div class="m-auto text-center w-[100%]">
+                <input type="text" name="Id" placeholder="Subject" class="w-[90%] m-auto p-[2%] bg-[#212225]">
+            </div><br>
+            <div class="m-auto text-center w-[100%]">
+              <textarea name="you" cols="30" rows="10" placeholder="Message" class="w-[90%] m-auto p-[2%] bg-[#212225]"></textarea>
+            </div><br>
+            <div class="text-center w-[100%]">
+                <input type="submit" value="Submit Now" class="bg-[#91301a] p-[1.5%] rounded-2xl font-bold cursor-pointer">
+            </div><br>
+        </form>
+        </div>
       </div>
       
-      <div class="flex flex-row justify-center mt-[3.5%]">
-        <div class="my-auto mx-[2%] text-[150%] font-semibold">
-          Connect with me : 
-        </div>
-        <div class="mx-[2%]">
-          <ul class="flex flex-row my-3">
-            <li><a href="#" class="fa fa-instagram mx-5 p-3 ml-0  border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-red-500"></a></li>
-            <li><a href="#" class="fa fa-linkedin mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-900"></a></li>
-            <li><a href="#" class="fa fa-twitter mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-500"></a></li>
-          </ul>
-        </div>
-      </div>
     
     
 </body>
