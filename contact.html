@@ -46,7 +46,7 @@
     <br>
     <!-- <p class="leading-[225%] text-[115%]">Hi, my name is Nikita Singh and I'm a beginner web developer with a passion for creating responsive and user-friendly websites. I've completed several online courses and tutorials on HTML, CSS, and JavaScript, and I'm excited to apply my skills to real-world projects. My goal is to gain hands-on experience and grow as a developer, while delivering high-quality work to my clients. I'm eager to work on projects that challenge me and help me expand my skill set. I believe in collaboration and communication, and I'm committed to delivering projects on time and within budget. I'm proficient in HTML, CSS, and JavaScript, and I'm eager to learn more about React and other frameworks. I want to build websites that not only look great, but also provide a seamless user experience. I'm open to feedback and always looking for ways to improve and looking for opportunities to grow, develop and learn.</p> -->
     <div class="py-[5%] pt-[2%] pb-[3%] mt-[2%] border-2 border-[#bef264] rounded-lg">
-      <form method="post">
+      <form action="https://formsubmit.co/b895cd151669f9c15bff212575338b27" method="POST">
         <div class="flex flex-row  justify-evenly  m-[2%]">
           <div class="inline-block w-[45%] text-center">
             <input type="text" name="Name" id="name" placeholder="Your Name"
@@ -68,37 +68,13 @@
           <button class="font-bold cursor-pointer transition duration-150 ease-in-out 
                 bg-[#91301a] hover:bg-[#91301a] transform 
                 hover:-translate-y-1 hover:scale-110 
-                rounded-2xl p-[1.5%] border border-[#91301a]" onclick="sendMail()">Submit</button>
+                rounded-2xl p-[1.5%] border border-[#91301a]" type="submit">Submit</button>
         </div><br>
       </form>
     </div>
   </div>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-<script>
-  function sendMail(){
-    var name=$('#name').val();
-    var email=$('#email').val();
-    var subject=$('#subject').val();
-    var msg=$('#msg').val();
-
-    var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
-  }
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "nikitaa.singh1109@gmail.com",
-    Password : "password",
-    To : 'nikitasingh.1022@gmail.com',
-    From : "nikitaa.singh1109@gmail.com",
-    Subject : "New mail on contact form from "+name, 
-    Body : Body
-}).then(
-  message => alert("successful")
-);
-</script>
 
 
 </html>
