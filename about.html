@@ -10,18 +10,18 @@
 </head>
 <body class="bg-black text-white  h-auto w-full bg-[url('/static/grey-bg.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
     <nav class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[3.5%] pt-[1.5%]">
-        <p class="mx-5  text-white float-left text-4xl font-extrabold">Nikita Singh </p>
+        <p class="mx-5  text-white float-left text-4xl font-extrabold"><a href="/index.html">Nikita Singh</a></p>
         <ul class="flex flex-row float-right">
-          <li class="mx-5 text-white font-medium text-xl hover:border-b-2 border-green-400 cursor-pointer">Home</li>
+          <li class="mx-5 text-white font-medium text-xl hover:border-b-2 border-green-400 cursor-pointer"><a href="/index.html">Home</a></li>
           <li class="mx-5 text-xl  text-white font-medium hover:border-b-2 border-green-400 cursor-pointer"><a href="/about.html">About</a></li>
-          <li class="mx-5 text-xl  text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Resume</li>
+          <li class="mx-5 text-xl  text-white font-medium hover:border-b-2 border-green-400 cursor-pointer"><a href="/resume.html">Resume</a></li>
           <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Services</li>
-          <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Contact</li>
+          <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer"><a href="/contact.html">Contact</a></li>
           <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Portfolio</li>
         </ul>
       </nav>
     <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
-        <p class="text-3xl font-bold ml-4 p-4 text-[#bef264]">ABOUT ME</p><hr class="w-[40%] ml-4">
+        <p class="text-5xl font-bold ml-4 p-4 text-[#bef264]"><span id="element"></span></p><hr class="w-[40%] ml-4">
         <br>
         <div class="flex flex-row justify-evenly">
           <div class="flex flex-row justify-evenly  w-3/5 my-auto border-double border-4 border-white rounded-xl">
@@ -53,13 +53,19 @@
         </div>
         <div class="mx-[2%]">
           <ul class="flex flex-row my-3">
-            <li><a href="#" class="fa fa-instagram mx-5 p-3 ml-0  border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-red-500"></a></li>
-            <li><a href="#" class="fa fa-linkedin mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-900"></a></li>
-            <li><a href="#" class="fa fa-twitter mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-500"></a></li>
+            <li><a href="https://instagram.com/nikita_xingh?igshid=NmQ2ZmYxZjA=" class="fa fa-instagram mx-5 p-3 ml-0  border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-red-500"></a></li>
+            <li><a href="https://www.linkedin.com/in/nikita-singh-385224218" class="fa fa-linkedin mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-900"></a></li>
+            <li><a href="https://twitter.com/NikitaaSinghh" class="fa fa-twitter mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-500"></a></li>
           </ul>
         </div>
       </div>
     
-    
+      <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+      <script>
+          var typed = new Typed('#element', {
+            strings: ['ABOUT ME'],
+            typeSpeed: 100,
+          });
+        </script>
 </body>
 </html>
