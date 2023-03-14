@@ -6,45 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
+  <link rel="stylesheet" href="style.scss">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="bg-black text-white  h-auto w-full bg-[url('/static/grey-bg.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
   <nav class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[3.5%] pt-[1.5%]">
-    <p class="mx-5  text-white float-left text-4xl font-extrabold"><a href="/index.html">Nikita Singh</a></p>
-    <ul class="flex flex-row float-right">
-      <li class="mx-5 text-white font-medium text-xl hover:border-b-2 border-green-400 cursor-pointer"><a href="/index.html">Home</a></li>
-      <li class="mx-5 text-xl  text-white font-medium hover:border-b-2 border-green-400 cursor-pointer"><a
+    <p class="mx-5  text-white float-left text-4xl font-extrabold element"><a href="/index.html">Nikita Singh</a></p>
+    <ul class="flex flex-row float-right topnav" id="myTopnav">
+      <li class="mx-5 text-white font-medium text-xl link_underline"><a href="/index.html">Home</a></li>
+      <li class="mx-5 text-xl  text-white font-medium link_underline"><a
           href="/about.html">About</a></li>
-      <li class="mx-5 text-xl  text-white font-medium hover:border-b-2 border-green-400 cursor-pointer"><a href="/resume.html">Resume</a></li>
-      <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Services</li>
-      <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer"><a href="/contact.html">Contact</a></li>
-      <li class="mx-5 text-xl text-white font-medium hover:border-b-2 border-green-400 cursor-pointer">Portfolio</li>
+      <li class="mx-5 text-xl  text-white font-medium link_underline"><a href="/resume.html">Resume</a></li>
+      <!-- <li class="mx-5 text-xl text-white font-medium link_underline">Services</li> -->
+      <li class="mx-5 text-xl text-white font-medium link_underline"><a href="/contact.html">Contact</a></li>
+      <li class="mx-5 text-xl text-white font-medium link_underline">Portfolio</li>
+      <li href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </li>
     </ul>
   </nav>
   <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
     <p class="text-5xl font-bold ml-4 p-4 text-[#bef264]"><span id="element"></span></p>
     <hr class="w-[40%] ml-4">
     <br>
-    <div class="flex flex-row justify-evenly p-[1%]">
+    <div class="flex flex-row justify-evenly p-[1%] box">
       <div class="flex flex-col w-[40%] my-auto">
-        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264]">My Address <span
+        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">My Address <span
             class="font-medium block text-[80%] text-white">Barauni Refinery Township, Begusarai, Bihar</span>
         </p>
-        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264]">Email Me <span
+        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">Email Me <span
             class="font-medium block text-[80%] text-white">nikitasingh.1022@gmail.com</span></p>
       </div>
       <div class="flex flex-col w-[40%] my-auto">
-        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] leading-[180%] text-[#bef264]">Social
-          Profiles <span class="font-medium block text-[80%] fa fa-instagram mx-[7%] text-white"> <span
-              class="fa fa-linkedin ml-[8%] "></span><span class="fa fa-twitter ml-[8%]"></span></span></p>
-        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264]">Call Me <span
-            class="font-medium block text-[80%] text-white">+91 9006445884</span></p>
+        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] leading-[180%] text-[#bef264] move">Social
+          Profiles <br><a class="font-medium inline text-[85%] fa fa-github mx-[7%] text-white" href="https://github.com/nikitaasinghh" target="_blank"></a> <a
+              class="fa fa-linkedin mx-[7%] inline text-white" href="https://www.linkedin.com/in/nikita-singh-385224218" target="_blank"></a><a class="fa fa-twitter mx-[7%] inline text-white" href="https://twitter.com/NikitaaSinghh" target="_blank"></a></p>
+        <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">Call Me <span
+            class="font-medium block text-[80%] text-white">+91 9XXXXXXXXX</span></p>
       </div>
     </div>
     <br>
-    <!-- <p class="leading-[225%] text-[115%]">Hi, my name is Nikita Singh and I'm a beginner web developer with a passion for creating responsive and user-friendly websites. I've completed several online courses and tutorials on HTML, CSS, and JavaScript, and I'm excited to apply my skills to real-world projects. My goal is to gain hands-on experience and grow as a developer, while delivering high-quality work to my clients. I'm eager to work on projects that challenge me and help me expand my skill set. I believe in collaboration and communication, and I'm committed to delivering projects on time and within budget. I'm proficient in HTML, CSS, and JavaScript, and I'm eager to learn more about React and other frameworks. I want to build websites that not only look great, but also provide a seamless user experience. I'm open to feedback and always looking for ways to improve and looking for opportunities to grow, develop and learn.</p> -->
     <div class="py-[5%] pt-[2%] pb-[3%] mt-[2%] border-2 border-[#bef264] rounded-lg">
       <form action="https://formsubmit.co/b895cd151669f9c15bff212575338b27" method="POST">
         <div class="flex flex-row  justify-evenly  m-[2%]">
@@ -81,6 +84,20 @@
           typeSpeed: 100,
         });
       </script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    var y=document.getElementById("element");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+      y.className += " responsive";
+
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script> 
 </body>
 
 
