@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-black text-white  h-auto w-full bg-[url('/static/grey-bg.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
-  <nav class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[3.5%] pt-[1.5%]">
+  <nav class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[3.5%] pt-[1.5%] navBar">
     <p class="mx-5  text-white float-left text-4xl font-extrabold element"><a href="/index.html">Nikita Singh</a></p>
     <ul class="flex flex-row float-right topnav" id="myTopnav">
       <li class="mx-5 text-white font-medium text-xl link_underline"><a href="/index.html">Home</a></li>
@@ -37,14 +37,14 @@
             class="font-medium block text-[80%] text-white">Barauni Refinery Township, Begusarai, Bihar</span>
         </p>
         <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">Email Me <span
-            class="font-medium block text-[80%] text-white">nikitasingh.1022@gmail.com</span></p>
+            class="font-medium block text-[80%] text-white overflow-auto">nikitasingh.1022@gmail.com</span></p>
       </div>
       <div class="flex flex-col w-[40%] my-auto">
         <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] leading-[180%] text-[#bef264] move">Social
           Profiles <br><a class="font-medium inline text-[85%] fa fa-github mx-[7%] text-white" href="https://github.com/nikitaasinghh" target="_blank"></a> <a
               class="fa fa-linkedin mx-[7%] inline text-white" href="https://www.linkedin.com/in/nikita-singh-385224218" target="_blank"></a><a class="fa fa-twitter mx-[7%] inline text-white" href="https://twitter.com/NikitaaSinghh" target="_blank"></a></p>
         <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">Call Me <span
-            class="font-medium block text-[80%] text-white">+91 9XXXXXXXXX</span></p>
+            class="font-medium block text-[80%] text-white overflow-auto">+91 9XXXXXXXXX</span></p>
       </div>
     </div>
     <br>
@@ -61,11 +61,11 @@
           </div>
         </div>
         <div class="m-auto text-center w-[100%]">
-          <input type="text" name="Id" id="subject" placeholder="Subject" class="w-[90%] m-auto p-[2%] bg-[#212225]">
+          <input type="text" name="Id" id="subject" placeholder="Subject" class="w-[90%] m-auto p-[2%] mb-[0%] bg-[#212225]">
         </div><br>
         <div class="m-auto text-center w-[100%]">
           <textarea name="you" cols="30" rows="10" id="msg" placeholder="Message"
-            class="w-[90%] m-auto p-[2%] bg-[#212225]"></textarea>
+            class="w-[90%] m-auto p-[2%] mt-[0%] bg-[#212225]"></textarea>
         </div><br>
         <div class="text-center w-[100%]">
           <button class="font-bold cursor-pointer transition duration-150 ease-in-out 
@@ -91,7 +91,7 @@
     var y=document.getElementById("element");
     if (x.className === "topnav") {
       x.className += " responsive";
-      y.className += " responsive";
+      // y.className += " responsive";
 
     } else {
       x.className = "topnav";
