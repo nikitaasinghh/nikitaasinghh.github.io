@@ -9,38 +9,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.scss">
   </head>
-  <body class="bg-black text-white h-full w-full ">
-      <div class="relative flex h-full w-full place-items-center">
-        <div
-          class="border-solid border-2 border-white flex flex-col justify-start p-[3%] ml-[7%] w-[50%] rounded-2xl"
-        >
-          <div>
-            <p class="text-6xl font-mono font-extrabold text-[#bef264]"><span id="element"></span></p>
-            <span class="text font-sans text-xl" id="text"></span>
-          </div>
-          <br>
-          <br>
-          <nav>
-            <ul class="flex flex-row">
-              <li class="mx-5 link_underline ml-0 text-gray-300 font-medium text-xl "><a href="/index.html">Home</a></li>
-              <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a href="/about.html">About</a></li>
-              <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a href="/resume.html">Resume</a></li>
-              <!-- <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer">Services</li> -->
-              <li class="mx-5 link_underline text-xl text-gray-300 font-mediumcursor-pointer"><a href="/contact.html">Contact</a></li>
-              <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer">Portfolio</li>
-              <!-- <li href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </li> -->
+  <body class="bg-black text-white h-full w-full bg-[url('/static/bg4.jpg')] z-0 bg-cover ">
+      <div class="flex flex-row my-[7%]">
+        <div class=" h-full p-[0%] flex place-items-start w-[50%] ml-[2%]">
+         <img src="/static/edited.png" class="h-[80%] w-[80%] " alt="">
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic repudiandae autem perspiciatis non eligendi quasi, ad temporibus quas, facere officiis mollitia. Earum labore laborum assumenda illo, accusantium minus ab natus odit sit animi ad dolorum dolorem eum aliquid nam facere eius nulla ipsum iusto doloremque at optio! Ipsam adipisci voluptatibus tempora amet sunt nulla quos consequuntur, consequatur quisquam qui voluptas excepturi possimus magni blanditiis obcaecati, officia deserunt dignissimos modi repellat distinctio laudantium harum nesciunt debitis corporis. Doloremque, iusto! Nemo, officiis? Obcaecati, recusandae minus ullam explicabo necessitatibus praesentium quia dolorum earum delectus maxime saepe repellat quas, natus doloribus aliquam unde.</p> -->
+        </div>
+        <div class="relative flex h-full w-full place-items-center  my-auto">
+          <div
+            class="border-solid border-2 border-white flex flex-col justify-start p-[3%] ml-[2s%] w-full rounded-2xl place-items-center text-center mr-[3%]">
+            <div>
+              <p class="text-6xl font-mono font-extrabold text-[#bef264]"><span id="element"></span></p>
+              <span class="text font-sans text-xl" id="text"></span>
+            </div>
+            <br>
+            <br>
+            <nav>
+              <ul class="flex flex-row">
+                <li class="mx-5 link_underline ml-0 text-gray-300 font-medium text-xl "><a href="/index.html">Home</a></li>
+                <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a href="/about.html">About</a></li>
+                <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a href="/resume.html">Resume</a></li>
+                <!-- <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer">Services</li> -->
+                <li class="mx-5 link_underline text-xl text-gray-300 font-mediumcursor-pointer"><a href="/contact.html">Contact</a></li>
+                <!-- <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer">Portfolio</li> -->
+                <!-- <li href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </li> -->
+              </ul>
+            </nav>
+            <br>
+            <ul class="flex flex-row my-3">
+              <li><a href="https://github.com/nikitaasinghh" class="fa fa-github mx-5 p-3 ml-0  border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-gray-600"></a></li>
+              <li><a href="https://www.linkedin.com/in/nikita-singh-385224218" class="fa fa-linkedin mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-900"></a></li>
+              <li><a href="https://twitter.com/NikitaaSinghh" class="fa fa-twitter mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-500"></a></li>
             </ul>
-          </nav>
-          <br>
-          <ul class="flex flex-row my-3">
-            <li><a href="https://github.com/nikitaasinghh" class="fa fa-github mx-5 p-3 ml-0  border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-gray-600"></a></li>
-            <li><a href="https://www.linkedin.com/in/nikita-singh-385224218" class="fa fa-linkedin mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-900"></a></li>
-            <li><a href="https://twitter.com/NikitaaSinghh" class="fa fa-twitter mx-5 p-3 border-solid border-2 border-white bg-gray-900 rounded-3xl hover:bg-blue-500"></a></li>
-          </ul>
+          </div>
         </div>
       </div>
+
       <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {

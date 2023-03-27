@@ -5,6 +5,9 @@ module.exports = {
     // fontFamily: {
     //   Macondo : ['Macondo', 'cursive']
     // },
+    screens:{
+      'small':'0px'
+    },
     extend: {
       backgroundImage: {
         'greyy': "url('/static/grey-bg.jpg')",
