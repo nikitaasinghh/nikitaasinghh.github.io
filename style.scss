@@ -103,3 +103,9 @@
   animation: mymove 3s ;
   animation-timing-function: ease-in-out;
 }
+
+@media (max-width: 560px) {
+  img{
+    display: none;
+  }
+}
