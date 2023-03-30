@@ -9,6 +9,37 @@
   <link rel="stylesheet" href="style.scss">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    tailwind.config = {
+      content: ["*"],
+      theme: {
+        // fontFamily: {
+        //   Macondo : ['Macondo', 'cursive']
+        // },
+        screens: {
+          '2xl': { 'max': '1535px' },
+          // => @media (max-width: 1535px) { ... }
+
+          'xl': { 'max': '1279px' },
+          // => @media (max-width: 1279px) { ... }
+
+          'lg': { 'max': '1023px' },
+          // => @media (max-width: 1023px) { ... }
+
+          'md': { 'max': '767px' },
+          // => @media (max-width: 767px) { ... }
+
+          'sm': { 'max': '710px' },
+          // => @media (max-width: 639px) { ... }
+        },
+        extend: {
+          backgroundImage: {
+            'greyy': "url('/static/grey-bg.jpg')",
+          },
+        },
+      }
+    }
+  </script>
 </head>
 
 <body class="bg-black text-white  h-auto w-full bg-[url('/static/bg2.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
@@ -61,17 +92,17 @@
 
   <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
     <p class="text-5xl font-bold ml-4 p-4 text-[#bef264]"><span id="element"></span></p>
-    <hr class="w-[40%] ml-4">
+    <hr class="w-[40%] ml-[2%] sm:ml-[10%] sm:w-[50%] lg:ml-[5%]">
     <br>
-    <div class="flex flex-row justify-evenly p-[1%] box">
-      <div class="flex flex-col w-[40%] my-auto">
+    <div class="flex flex-row justify-evenly p-[1%] box sm:flex-col">
+      <div class="flex flex-col w-[40%] my-auto sm:w-[100%]">
         <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">My Address <span
             class="font-medium block text-[80%] text-white">Barauni Refinery Township, Begusarai, Bihar</span>
         </p>
         <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] text-[#bef264] move">Email Me <span
             class="font-medium block text-[80%] text-white overflow-auto">nikitasingh.1022@gmail.com</span></p>
       </div>
-      <div class="flex flex-col w-[40%] my-auto">
+      <div class="flex flex-col w-[40%] my-auto sm:w-[100%]">
         <p class="bg-[#212225] rounded-xl font-bold m-[4%] p-[5%] text-[150%] leading-[180%] text-[#bef264] move">Social
           Profiles <br><a class="font-medium inline text-[85%] fa fa-github mx-[7%] text-white"
             href="https://github.com/nikitaasinghh" target="_blank"></a> <a

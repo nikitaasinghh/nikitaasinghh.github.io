@@ -9,6 +9,37 @@
     <link rel="stylesheet" href="style.scss">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+          content: ["*"],
+          theme: {
+            // fontFamily: {
+            //   Macondo : ['Macondo', 'cursive']
+            // },
+            screens: {
+              '2xl': { 'max': '1535px' },
+              // => @media (max-width: 1535px) { ... }
+    
+              'xl': { 'max': '1279px' },
+              // => @media (max-width: 1279px) { ... }
+    
+              'lg': { 'max': '1023px' },
+              // => @media (max-width: 1023px) { ... }
+    
+              'md': { 'max': '767px' },
+              // => @media (max-width: 767px) { ... }
+    
+              'sm': { 'max': '639px' },
+              // => @media (max-width: 639px) { ... }
+            },
+            extend: {
+              backgroundImage: {
+                'greyy': "url('/static/grey-bg.jpg')",
+              },
+            },
+          }
+        }
+      </script>
 </head>
 
 <body class="bg-black text-white  h-auto w-full bg-[url('/static/bg2.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
@@ -36,7 +67,8 @@
 
     <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
         <p class="text-[250%] font-bold ml-4 p-4 text-[#bef264]"><span id="element"></span></p>
-        <hr class="w-[40%] ml-4">
+        <!-- <hr class="w-[40%] ml-5 sm:w-[50%]"> -->
+        <hr class="w-[40%] ml-[2%] sm:ml-[10%] sm:w-[50%] lg:ml-[5%]">
         <br>
 
         <!-- EDUCATION -->
@@ -46,7 +78,7 @@
 
             <a href="/static/sem-5.pdf" target="_blank">
                 <div
-                    class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120]">
+                    class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
                     <p class="text-[150%] font-bold text-[#bef264]">
                         BACHELOR OF TECHNOLOGY
                     </p>
@@ -64,7 +96,7 @@
 
             <a href="/static/12th Marksheet.pdf" target="_blank">
                 <div
-                    class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120]">
+                    class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
                     <p class="text-[150%] font-bold text-[#bef264]">
                         CLASS 12th
                     </p>
@@ -80,7 +112,7 @@
 
             <a href="/static/10th Marksheet.pdf" target="_blank">
                 <div
-                    class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120]">
+                    class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
                     <p class="text-[150%] font-bold text-[#bef264]">
                         CLASS 10th
                     </p>
@@ -105,7 +137,7 @@
             <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Projects</h2>
             <a href="https://github.com/nikitaasinghh/ChatApp" target="_blank">
                 <div
-                    class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120]">
+                    class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
                     <p class="text-[150%] font-bold text-[#bef264]">
                         CHAT APPLICATION
                     </p>
@@ -148,7 +180,7 @@
                 <div class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%]  pt-[3%] transition duration-500 ease-in-out 
             bg-[#212120] hover:bg-[#212120] transform 
             hover:-translate-y-1 hover:scale-[103%]
-            rounded-[10%] p-4 border border-[#212120]">
+            rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
                     <p class="text-[150%] font-bold text-[#bef264]">
                         Web Development BootCamp by ShapeAI
                     </p>
@@ -161,7 +193,7 @@
 
             <a href="https://coursera.org/share/a040bc5f58568178f18ae74f013dfed4" target="_blank">
                 <div
-                    class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120]">
+                    class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
                     <p class="text-[150%] font-bold text-[#bef264]">
                         Responsive Web Design
                     </p><br>
