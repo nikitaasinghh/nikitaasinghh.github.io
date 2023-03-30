@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="style.scss">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* width */
+    ::-webkit-scrollbar {
+      width: 1px;
+      height: 2px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #212121; 
+    }
+   
+    </style>
   <script>
     tailwind.config = {
       content: ["*"],
@@ -119,26 +132,26 @@
         <div class="flex flex-row  justify-evenly  m-[2%]">
           <div class="inline-block w-[45%] text-center lg:mb-[2%]">
             <input type="text" name="Name" id="name" placeholder="Your Name"
-              class="inline w-[100%] p-[3.5%] bg-[#212225]">
+              class="inline w-[100%] p-[3.5%] bg-[#212225] rounded-2xl md:rounded-lg">
           </div>
           <div class="inline-block w-[45%] text-center lg:mb-[2%]">
             <input type="email" name="email" id="email" placeholder="Your Email"
-              class="inline w-[100%] p-[3.5%] bg-[#212225] ">
+              class="inline w-[100%] p-[3.5%] bg-[#212225]  rounded-2xl md:rounded-lg">
           </div>
         </div>
         <div class="m-auto text-center w-[100%]">
           <input type="text" name="Id" id="subject" placeholder="Subject"
-            class="w-[90%] m-auto p-[2%] mb-[0%] bg-[#212225]">
+            class="w-[90%] m-auto p-[2%] mb-[0%] bg-[#212225] rounded-2xl md:rounded-lg">
         </div><br>
         <div class="m-auto text-center w-[100%] md:mt-[-1%]">
           <textarea name="you" cols="30" rows="10" id="msg" placeholder="Message"
-            class="w-[90%] m-auto p-[2%] mt-[0%] bg-[#212225]"></textarea>
+            class="w-[90%] m-auto p-[2%] mt-[0%] bg-[#212225] rounded-2xl md:rounded-lg"></textarea>
         </div><br>
         <div class="text-center w-[100%]">
           <button class="font-bold cursor-pointer transition duration-150 ease-in-out 
                 bg-[#91301a] hover:bg-[#91301a] transform 
                 hover:-translate-y-1 hover:scale-110 
-                rounded-2xl p-[1.5%] border border-[#91301a]" type="submit">Submit</button>
+                rounded-2xl p-[1.5%] border border-[#91301a] md:rounded-xl" type="submit">Submit</button>
         </div><br>
       </form>
     </div>
