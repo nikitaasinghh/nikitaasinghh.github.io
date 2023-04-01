@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.scss">
@@ -79,29 +78,21 @@
           <span class="text font-sans text-2xl" id="text"></span>
 
           <br>
-          <span class="text-3xl cursor-pointer mx-2 sm:block hidden ">
-            <!-- <span class="text-3xl cursor-pointer mx-2 md:hidden block"> -->
-              <!-- <ion-icon name="menu" onclick="classToggle()"></ion-icon>
-            </span> -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon icon h-[10%] w-[10%] border-2 border-white m-auto" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144" onclick="classToggle()" /></svg> 
-          </span>
+          <button class="text-3xl cursor-pointer mx-auto place-items-center sm:block hidden" type="button" onclick="classToggle()">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon icon h-[10%] w-[10%] border-2 border-white m-auto" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144" onclick="classToggle()" /></svg> 
+          </button>
         </div>
         <br>
         <br>
         <nav class="">
-          <ul class="flex flex-row sm:opacity-0 navbar">
+          <ul id="navbar" class="flex flex-row sm:hidden navbar">
             <li class="mx-5 link_underline ml-0 text-gray-300 font-medium text-xl "><a href="/index.html">Home</a></li>
             <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a
                 href="/about.html">About</a></li>
             <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a
                 href="/resume.html">Resume</a></li>
-            <!-- <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer">Services</li> -->
             <li class="mx-5 link_underline text-xl text-gray-300 font-mediumcursor-pointer"><a
                 href="/contact.html">Contact</a></li>
-            <!-- <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer">Portfolio</li> -->
-            <!-- <li href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </li> -->
           </ul>
         </nav>
         <br>
@@ -133,36 +124,25 @@
       strings: ["Hi there !!!", "Welcome to my Website !!", "I am a student who is passionate about <i>Web Development</i>", "I'm always open to new opportunities and collaborations...", "If you'd like to get in touch, feel free to reach out ....", "Have a nice day !!"],
       loop: true,
       typeSpeed: 150,
-      backSpeed: 100,
-      // backDelay : 1000
+      backSpeed: 100
     })
   </script>
 
-<!-- <script>
-  function Menu(e){
-    let list = document.querySelector('ul');
-    e.className === 'ionicon' ? (e.className = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.className = "ionicon" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-  }
-</script> -->
 <script>
-  // function Menu(e){
-  //   let list = document.getElementsByClassName('.navbar');
-  //   e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-  // }
   let j=0;
-  const navs = document.getElementsByClassName("navbar")
+  const navs = document.getElementById("navbar");
   const icon = document.getElementsByClassName("ionicon")
-  // icon.addEventListener("click", classToggle);
   function classToggle() {
-    // j++;
-    // if(j%2==0)
-      // navs.classList.toggle('Toggle');
-      navs.classList.add("opacity-100");
-      navs.classList.add("flex-col");
-      console.log("Running")
-    // else
-    //   navs.classList.add('toggle');
-}
+    if(navs.classList.contains("sm:hidden")){
+      navs.classList.remove("sm:hidden");
+    }
+    else{
+      navs.classList.add("sm:hidden");
+    }
+    navs.classList.add("flex");
+    navs.classList.add("flex-col");
+    console.log("Running")
+  }
 </script>
 
 </body>
