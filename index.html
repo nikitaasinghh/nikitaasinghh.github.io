@@ -10,6 +10,16 @@
   <link rel="stylesheet" href="style.scss">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .Toggle{
+      /* display: flex; */
+      opacity: 1;
+      flex-direction: column;
+      /* display: ; */
+    }
+  </style>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
     tailwind.config = {
       content: ["*"],
@@ -49,17 +59,25 @@
       <img src="/static/edited.png" class="h-[100%] w-[100%]" alt="">
       <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic repudiandae autem perspiciatis non eligendi quasi, ad temporibus quas, facere officiis mollitia. Earum labore laborum assumenda illo, accusantium minus ab natus odit sit animi ad dolorum dolorem eum aliquid nam facere eius nulla ipsum iusto doloremque at optio! Ipsam adipisci voluptatibus tempora amet sunt nulla quos consequuntur, consequatur quisquam qui voluptas excepturi possimus magni blanditiis obcaecati, officia deserunt dignissimos modi repellat distinctio laudantium harum nesciunt debitis corporis. Doloremque, iusto! Nemo, officiis? Obcaecati, recusandae minus ullam explicabo necessitatibus praesentium quia dolorum earum delectus maxime saepe repellat quas, natus doloribus aliquam unde.</p> -->
     </div>
-    <div class="relative flex h-full w-full place-items-center my-auto">
+    <div class="relative flex h-full w-full place-items-center my-auto md:m-[2%] mr-[2%]">
       <div
         class="border-solid border-2 border-white flex flex-col justify-start p-[3%] ml-[2s%] w-full rounded-2xl place-items-center text-center mr-[3%]">
         <div>
-          <p class="text-[600%] font-mono font-extrabold text-[#bef264] "><span id="element"></span></p>
+          <p class="text-[600%] font-mono font-extrabold text-[#bef264] md:text-[400%]"><span id="element"></span></p>
           <span class="text font-sans text-2xl" id="text"></span>
+
+          <br>
+          <span class="text-3xl cursor-pointer mx-2 sm:block hidden ">
+            <!-- <span class="text-3xl cursor-pointer mx-2 md:hidden block"> -->
+              <!-- <ion-icon name="menu" onclick="classToggle()"></ion-icon>
+            </span> -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon icon h-[10%] w-[10%] border-2 border-white m-auto" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144" onclick="classToggle()" /></svg> 
+          </span>
         </div>
         <br>
         <br>
-        <nav class="wra">
-          <ul class="flex flex-row">
+        <nav class="">
+          <ul class="flex flex-row navbar sm:opacity-0">
             <li class="mx-5 link_underline ml-0 text-gray-300 font-medium text-xl "><a href="/index.html">Home</a></li>
             <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a
                 href="/about.html">About</a></li>
@@ -107,6 +125,31 @@
       // backDelay : 1000
     })
   </script>
+
+<!-- <script>
+  function Menu(e){
+    let list = document.querySelector('ul');
+    e.className === 'ionicon' ? (e.className = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.className = "ionicon" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+  }
+</script> -->
+<script>
+  // function Menu(e){
+  //   let list = document.getElementsByClassName('.navbar');
+  //   e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+  // }
+  let j=0;
+  const navs = document.getElementsByClassName("navbar")
+  const icon = document.getElementsByClassName("ionicon")
+  // icon.addEventListener("click", classToggle);
+  function classToggle() {
+    // j++;
+    // if(j%2==0)
+      navs.classList.toggle('Toggle');
+      console.log("Running")
+    // else
+    //   navs.classList.add('toggle');
+}
+</script>
 
 </body>
 
