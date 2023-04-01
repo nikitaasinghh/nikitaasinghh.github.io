@@ -11,6 +11,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    /* width */
+    ::-webkit-scrollbar {
+      width: 1px;
+      height: 2px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #212121; 
+    }
+   
+    </style>
+  <style>
     .Toggle{
       /* display: flex; */
       opacity: 1;
@@ -57,7 +70,6 @@
   <div class="flex 2xl:flex-row sm:flex-col my-[7%]">
     <div class=" h-full p-[0%] flex place-items-start sm:w-[100%] w-[50%] ml-[2%] sm:ml-[7%]">
       <img src="/static/edited.png" class="h-[100%] w-[100%]" alt="">
-      <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde hic repudiandae autem perspiciatis non eligendi quasi, ad temporibus quas, facere officiis mollitia. Earum labore laborum assumenda illo, accusantium minus ab natus odit sit animi ad dolorum dolorem eum aliquid nam facere eius nulla ipsum iusto doloremque at optio! Ipsam adipisci voluptatibus tempora amet sunt nulla quos consequuntur, consequatur quisquam qui voluptas excepturi possimus magni blanditiis obcaecati, officia deserunt dignissimos modi repellat distinctio laudantium harum nesciunt debitis corporis. Doloremque, iusto! Nemo, officiis? Obcaecati, recusandae minus ullam explicabo necessitatibus praesentium quia dolorum earum delectus maxime saepe repellat quas, natus doloribus aliquam unde.</p> -->
     </div>
     <div class="relative flex h-full w-full place-items-center my-auto md:m-[2%] mr-[2%]">
       <div
@@ -77,7 +89,7 @@
         <br>
         <br>
         <nav class="">
-          <ul class="flex flex-row navbar sm:opacity-0">
+          <ul class="flex flex-row sm:opacity-0 navbar">
             <li class="mx-5 link_underline ml-0 text-gray-300 font-medium text-xl "><a href="/index.html">Home</a></li>
             <li class="mx-5 link_underline text-xl text-gray-300 font-medium cursor-pointer"><a
                 href="/about.html">About</a></li>
@@ -144,7 +156,9 @@
   function classToggle() {
     // j++;
     // if(j%2==0)
-      navs.classList.toggle('Toggle');
+      // navs.classList.toggle('Toggle');
+      navs.classList.add("opacity-100");
+      navs.classList.add("flex-col");
       console.log("Running")
     // else
     //   navs.classList.add('toggle');
