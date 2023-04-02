@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="style.scss">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         @media screen and (max-width:767px){
+      .back{
+        background: linear-gradient(90deg, rgba(83,86,79,1) 0%, rgba(106,136,62,1) 35%);
+      }
+    }
+    </style>
     <script>
         tailwind.config = {
           content: ["*"],
@@ -17,7 +24,7 @@
             //   Macondo : ['Macondo', 'cursive']
             // },
             screens: {
-              '2xl': { 'max': '1535px' },
+              '2xl': { 'max': '8000px' },
               // => @media (max-width: 1535px) { ... }
     
               'xl': { 'max': '1279px' },
@@ -40,28 +47,61 @@
           }
         }
       </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="bg-black text-white  h-auto w-full bg-[url('/static/bg2.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
 
     <!-- NAVBAR -->
 
-    <nav class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[3.5%] pt-[1.5%]">
-        <p class="mx-5  text-white font-extrabold float-left text-4xl"><a href="/index.html">Nikita Singh</a></p>
-        <ul class="flex flex-row float-right">
-            <li class="mx-5 text-white font-medium text-xl link_underline"><a href="/index.html">Home</a></li>
-            <li class="mx-5 text-xl  text-white font-medium link_underline"><a
-                    href="/about.html">About</a></li>
-            <li class="mx-5 text-xl  text-white font-medium link_underline"><a href="/resume.html">Resume</a>
-            </li>
-            <!-- <li class="mx-5 text-xl text-white font-medium link_underline">Services
-            </li> -->
-            <li class="mx-5 text-xl text-white font-medium link_underline"><a href="/contact.html">Contact</a>
-            </li>
-            <!-- <li class="mx-5 text-xl text-white font-medium link_underline">Portfolio
-            </li> -->
-        </ul>
-    </nav>
+    <nav
+  class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[2%] pt-[2%] m-auto flex flex-row justify-between w-full">
+  <ul>
+    <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
+    <li class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita
+        Singh</a></li>
+
+  </ul>
+  <button class="text-3xl cursor-pointer mx-auto place-items-end md:block hidden md:focus:outline-none mr-[2%]"
+    type="button">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg"
+      class="ionicon icon vert-move h-[20%] w-[20%] border-2 border-white m-auto rounded-[100%] p-[5%]"
+      viewBox="0 0 512 512">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+        d="M112 184l144 144 144-144" onclick="classToggle()" />
+    </svg> -->
+    <ion-icon name="menu-outline" class="ionicon icon" id="ionicon" onclick="classToggle()"></ion-icon>
+  </button>
+  <div class="md:hidden block">
+    <ul class="flex flex-row float-right md:hidden">
+      <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
+      <li class="mx-5 text-white font-medium text-xl link_underline cursor-pointer"><a href="/index.html">Home</a></li>
+      <li class="mx-5 text-xl  text-white font-medium link_underline cursor-pointer"><a href="/about.html">About</a>
+      </li>
+      <li class="mx-5 text-xl  text-white font-medium link_underline cursor-pointer"><a href="/resume.html">Resume</a>
+      </li>
+      <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Services</li> -->
+      <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer"><a href="/contact.html">Contact</a>
+      </li>
+      <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Portfolio</li> -->
+    </ul>
+  </div>
+</nav>
+<div class="back md:block 2xl:hidden md:items-center ">
+    <ul id="navbar" class="back w-full flex flex-row float-right md:hidden md:place-content-center p-[3%] mt-[1%] mb-[10%] sticky rounded-2xl">
+      <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
+      <li class="mx-5 font-medium text-xl link_underline cursor-pointer m-[1%] text-black"><a href="/index.html">Home</a></li>
+      <li class="mx-5 text-xl  font-medium link_underline cursor-pointer m-[1%] text-black"><a href="/about.html">About</a>
+      </li>
+      <li class="mx-5 text-xl  font-medium link_underline cursor-pointer m-[1%] text-black"><a href="/resume.html">Resume</a>
+      </li>
+      <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Services</li> -->
+      <li class="mx-5 text-xl font-medium link_underline cursor-pointer m-[1%] text-black"><a href="/contact.html">Contact</a>
+      </li>
+      <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Portfolio</li> -->
+    </ul>
+</div>
 
     <!-- MAIN CONTENT -->
 
@@ -231,6 +271,24 @@
           strings: ['CHECK MY RESUME'],
           typeSpeed: 100,
         });
+      </script>
+       <script>
+        let j = 0;
+        const navs = document.getElementById("navbar");
+        const icon = document.getElementById("ionicon")
+        function classToggle() {
+          if (navs.classList.contains("md:hidden")) {
+            navs.classList.remove("md:hidden");
+            // icon.classList.remove("vert-move");
+          }
+          else {
+            navs.classList.add("md:hidden");
+            // icon.classList.add("sm:vert-move");
+          }
+          navs.classList.add("md:flex");
+          navs.classList.add("md:flex-col");
+          console.log("Running")
+        }
       </script>
 </body>
 
