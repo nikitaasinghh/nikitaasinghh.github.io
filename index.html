@@ -80,6 +80,32 @@
       }
 
     }
+
+    .link_underline {
+        display: inline-block;
+        position: relative;
+        color: #bef264;
+      }
+
+      .link_underline::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #bef264;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .link_underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+    
   </style>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -147,13 +173,13 @@
         <br>
         <nav class="back font-sans desc font-Handlee sm:w-full rounded-3xl">
           <ul id="navbar" class="flex flex-row sm:hidden navbar sm:place-content-start sm:ml">
-            <li class="mx-8 link_underline  text-gray-300 font-semibold  text-[150%] sm:pl-0 sm:font-semibold sm:text-[#262725] sm:mt-[3%] sm:mb-[3%] sm:ml-0"><a
+            <li class="mx-8 link_underline  text-gray-300 font-semibold  text-[150%] sm:pl-0 sm:font-semibold sm:text-[#000000] sm:mt-[3%] sm:mb-[3%] sm:ml-0"><a
                 href="/index.html">Home</a></li>
-            <li class="mx-8 sm:ml-0 link_underline text-[150%] text-gray-300 font-semibold  cursor-pointer  sm:pl-0 sm:font-semibold sm:text-[#262725] sm:mb-[3%]"><a
+            <li class="mx-8 sm:ml-0 link_underline text-[150%] text-gray-300 font-semibold  cursor-pointer  sm:pl-0 sm:font-semibold sm:text-[#000000] sm:mb-[3%]"><a
                 href="/about.html">About</a></li>
-            <li class="mx-8 sm:ml-0 link_underline text-[150%] text-gray-300 font-semibold  cursor-pointer sm:font-semibold sm:text-[#262725] sm:mb-[3%]"><a
+            <li class="mx-8 sm:ml-0 link_underline text-[150%] text-gray-300 font-semibold  cursor-pointer sm:font-semibold sm:text-[#000000] sm:mb-[3%]"><a
                 href="/resume.html">Resume</a></li>
-            <li class="mx-8 sm:ml-0 link_underline text-[150%] text-gray-300 font-semibold cursor-pointer sm:font-semibold sm:text-[#262725] sm:mb-[3%]"><a
+            <li class="mx-8 sm:ml-0 link_underline text-[150%] text-gray-300 font-semibold cursor-pointer sm:font-semibold sm:text-[#000000] sm:mb-[3%]"><a
                 href="/contact.html">Contact</a></li>
           </ul>
         </nav>

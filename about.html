@@ -41,6 +41,30 @@
         background: linear-gradient(90deg, rgba(83,86,79,1) 0%, rgba(106,136,62,1) 35%);
       }
     }
+
+    .link_underline {
+        display: inline-block;
+        position: relative;
+        color: #bef264;
+      }
+
+      .link_underline::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #bef264;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .link_underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
   </style>
   <script>
     tailwind.config = {
@@ -118,7 +142,7 @@
     </div>
   </nav>
   <div class="back md:block 2xl:hidden md:items-center place-content-center justify-center">
-      <ul id="navbar" class="back desc font-Handlee w-full flex flex-row md:hidden md:place-content-center place-items-center p-[3%] mt-[1%] mb-[10%] sticky rounded-2xl">
+      <ul id="navbar" class="back desc font-Handlee w-full flex flex-row md:hidden md:place-content-center place-items-center p-[3%] mt-[1%] mb-[10%] absolute rounded-2xl">
         <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
         <li class="mx-5 font-semibold text-xl link_underline cursor-pointer m-[1%] place-content-center justify-center text-black"><a href="/index.html">Home</a></li>
         <li class="mx-5 text-xl  font-semibold link_underline cursor-pointer m-[1%] text-black"><a href="/about.html">About</a>

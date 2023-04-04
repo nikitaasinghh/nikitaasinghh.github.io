@@ -1,330 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <link rel="stylesheet" href="style.scss">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-  <style>
-    @media screen and (max-width:767px) {
-      .back {
-        background: linear-gradient(90deg, rgba(83, 86, 79, 1) 0%, rgba(106, 136, 62, 1) 35%);
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <!-- <link rel="stylesheet" href="style.scss"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+    <style>
+      @media screen and (max-width:767px) {
+        .back {
+          background: linear-gradient(90deg, rgba(83, 86, 79, 1) 0%, rgba(106, 136, 62, 1) 35%);
+        }
       }
-    }
-  </style>
-  <script>
-    tailwind.config = {
-      content: ["*"],
-      theme: {
-        // fontFamily: {
-        //   Macondo : ['Macondo', 'cursive']
-        // },
-        fontFamily: {
-          Sacramento: ['Sacramento', 'cursive'],
-          Handlee: ['Handlee', 'cursive'],
-          Merienda: ['Merienda', 'cursive'],
-          Edu: ['Edu NSW ACT Foundation', 'cursive']
-        },
-        screens: {
-          '2xl': { 'max': '8000px' },
-          // => @media (max-width: 1535px) { ... }
 
-          'xl': { 'max': '1279px' },
-          // => @media (max-width: 1279px) { ... }
+      .link_underline {
+        display: inline-block;
+        position: relative;
+        color: #bef264;
+      }
 
-          'lg': { 'max': '1023px' },
-          // => @media (max-width: 1023px) { ... }
+      .link_underline::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #bef264;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
 
-          'md': { 'max': '767px' },
-          // => @media (max-width: 767px) { ... }
-
-          'sm': { 'max': '639px' },
-          // => @media (max-width: 639px) { ... }
-        },
-        extend: {
-          backgroundImage: {
-            'greyy': "url('/static/grey-bg.jpg')",
+      .link_underline:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        content: ["*"],
+        theme: {
+          // fontFamily: {
+          //   Macondo : ['Macondo', 'cursive']
+          // },
+          fontFamily: {
+            Sacramento: ['Sacramento', 'cursive'],
+            Handlee: ['Handlee', 'cursive'],
+            Merienda: ['Merienda', 'cursive'],
+            Edu: ['Edu NSW ACT Foundation', 'cursive']
           },
-        },
+          screens: {
+            '2xl': { 'max': '8000px' },
+            // => @media (max-width: 1535px) { ... }
+
+            'xl': { 'max': '1279px' },
+            // => @media (max-width: 1279px) { ... }
+
+            'lg': { 'max': '1023px' },
+            // => @media (max-width: 1023px) { ... }
+
+            'md': { 'max': '767px' },
+            // => @media (max-width: 767px) { ... }
+
+            'sm': { 'max': '639px' },
+            // => @media (max-width: 639px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              'greyy': "url('/static/grey-bg.jpg')",
+            },
+          },
+        }
       }
-    }
-  </script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</head>
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
 
-<body class="bg-black text-white  h-auto w-full bg-[url('/static/bg2.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
+  <body class="bg-black text-white  h-auto w-full bg-[url('/static/bg2.jpg')] z-0 bg-cover overflow-scroll bg-fixed">
 
-  <!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-  <nav
-    class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[2%] pt-[2%] m-auto flex flex-row justify-between w-full">
-    <ul>
-      <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
-      <li class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita
-          Singh</a></li>
+    <nav
+      class="mt-[2%] h-[40%] bg-black px-[3.5%] rounded-full pb-[2%] pt-[2%] m-auto flex flex-row justify-between w-full">
+      <ul>
+        <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
+        <li class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita
+            Singh</a></li>
 
-    </ul>
-    <button class="text-3xl cursor-pointer mx-auto place-items-end md:block hidden md:focus:outline-none mr-[2%]"
-      type="button">
-      <!-- <svg xmlns="http://www.w3.org/2000/svg"
+      </ul>
+      <button class="text-3xl cursor-pointer mx-auto place-items-end md:block hidden md:focus:outline-none mr-[2%]"
+        type="button">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg"
       class="ionicon icon vert-move h-[20%] w-[20%] border-2 border-white m-auto rounded-[100%] p-[5%]"
       viewBox="0 0 512 512">
       <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
         d="M112 184l144 144 144-144" onclick="classToggle()" />
     </svg> -->
-      <ion-icon name="menu-outline" class="ionicon icon" id="ionicon" onclick="classToggle()"></ion-icon>
-    </button>
-    <div class="md:hidden block">
-      <ul class="desc font-Handlee flex flex-row float-right md:hidden">
+        <ion-icon name="menu-outline" class="ionicon icon" id="ionicon" onclick="classToggle()"></ion-icon>
+      </button>
+      <div class="md:hidden block">
+        <ul class="desc font-Handlee flex flex-row float-right md:hidden">
+          <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
+          <li class="lg:mr-7 2xl:mx-10  text-white font-semibold text-2xl link_underline cursor-pointer"><a
+              href="/index.html">Home</a></li>
+          <li class="lg:mr-7 2xl:mx-10 text-2xl  text-white font-semibold link_underline cursor-pointer"><a
+              href="/about.html">About</a>
+          </li>
+          <li class="lg:mr-7 2xl:mx-10 text-2xl  text-white font-semibold link_underline cursor-pointer"><a
+              href="/resume.html">Resume</a>
+          </li>
+          <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Services</li> -->
+          <li class="lg:mr-7 2xl:mx-10 text-2xl text-white font-semibold link_underline cursor-pointer"><a
+              href="/contact.html">Contact</a>
+          </li>
+          <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Portfolio</li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="back md:block 2xl:hidden md:items-center ">
+      <ul id="navbar"
+        class="back desc font-Handlee w-full absolute flex flex-row md:hidden md:place-content-center place-items-center place-content-center justify-center p-[3%] mt-[1%] mb-[10%] rounded-2xl">
         <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
-        <li class="lg:mr-7 2xl:mx-10  text-white font-semibold text-2xl link_underline cursor-pointer"><a
+        <li class="mx-5 font-semibold text-xl link_underline cursor-pointer m-[1%] text-black"><a
             href="/index.html">Home</a></li>
-        <li class="lg:mr-7 2xl:mx-10 text-2xl  text-white font-semibold link_underline cursor-pointer"><a
+        <li class="mx-5 text-xl  font-semibold link_underline cursor-pointer m-[1%] text-black"><a
             href="/about.html">About</a>
         </li>
-        <li class="lg:mr-7 2xl:mx-10 text-2xl  text-white font-semibold link_underline cursor-pointer"><a
+        <li class="mx-5 text-xl  font-semibold link_underline cursor-pointer m-[1%] text-black"><a
             href="/resume.html">Resume</a>
         </li>
         <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Services</li> -->
-        <li class="lg:mr-7 2xl:mx-10 text-2xl text-white font-semibold link_underline cursor-pointer"><a
+        <li class="mx-5 text-xl font-semibold link_underline cursor-pointer m-[1%] text-black"><a
             href="/contact.html">Contact</a>
         </li>
         <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Portfolio</li> -->
       </ul>
     </div>
-  </nav>
-  <div class="back md:block 2xl:hidden md:items-center ">
-    <ul id="navbar"
-      class="back desc font-Handlee w-full absolute flex flex-row md:hidden md:place-content-center place-items-center place-content-center justify-center p-[3%] mt-[1%] mb-[10%] rounded-2xl">
-      <!-- <p class="mx-5  md:mt-[-3%] float-left text-4xl font-extrabold text-[#bef264]"><a href="/index.html">Nikita Singh</a></p> -->
-      <li class="mx-5 font-semibold text-xl link_underline cursor-pointer m-[1%] text-black"><a
-          href="/index.html">Home</a></li>
-      <li class="mx-5 text-xl  font-semibold link_underline cursor-pointer m-[1%] text-black"><a
-          href="/about.html">About</a>
-      </li>
-      <li class="mx-5 text-xl  font-semibold link_underline cursor-pointer m-[1%] text-black"><a
-          href="/resume.html">Resume</a>
-      </li>
-      <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Services</li> -->
-      <li class="mx-5 text-xl font-semibold link_underline cursor-pointer m-[1%] text-black"><a
-          href="/contact.html">Contact</a>
-      </li>
-      <!-- <li class="mx-5 text-xl text-white font-medium link_underline cursor-pointer">Portfolio</li> -->
-    </ul>
-  </div>
 
-  <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
 
-  <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
-    <p class="text-[250%] font-bold ml-4 p-4 text-[#bef264]"><span id="element"></span></p>
-    <!-- <hr class="w-[40%] ml-5 sm:w-[50%]"> -->
-    <hr class="w-[40%] ml-[2%] sm:ml-[10%] sm:w-[50%] lg:ml-[5%]">
-    <br>
+    <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
+      <p class="text-[250%] font-bold ml-4 p-4 text-[#bef264]"><span id="element"></span></p>
+      <!-- <hr class="w-[40%] ml-5 sm:w-[50%]"> -->
+      <hr class="w-[40%] ml-[2%] sm:ml-[10%] sm:w-[50%] lg:ml-[5%]">
+      <br>
 
-    <!-- EDUCATION -->
+      <!-- EDUCATION -->
 
-    <div>
-      <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Education</h2>
+      <div>
+        <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Education</h2>
 
-      <a href="/static/sem-5.pdf" target="_blank">
-        <div
-          class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            BACHELOR OF TECHNOLOGY
-          </p>
+        <a href="/static/sem-5.pdf" target="_blank">
+          <div
+            class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
+            <p class="text-[150%] font-bold text-[#bef264]">
+              BACHELOR OF TECHNOLOGY
+            </p>
 
-          <p class="bg-[#555353] inline-block font-semibold px-[1%] my-[1%]">2020-Present</p>
-          <p class="italic font-mono text-[115%]">Techno Main Salt Lake</p>
-          <p class="mb-[0.5%]">GPA - 9.25 (5th Semester)</p>
-          <p class="field font-Merienda ">Currently pursuing my BTech degree from Techno Main Salt Lake, Kolkata ,West
-            Bengal. I am a 3rd
-            year
-            student from CSE department who has interest in web development and wants to learn more in this
-            field</p>
-          <br><br>
-        </div>
-      </a>
+            <p class="bg-[#555353] inline-block font-semibold px-[1%] my-[1%]">2020-Present</p>
+            <p class="italic font-mono text-[115%]">Techno Main Salt Lake</p>
+            <p class="mb-[0.5%]">GPA - 9.25 (5th Semester)</p>
+            <p class="field font-Merienda ">Currently pursuing my BTech degree from Techno Main Salt Lake, Kolkata ,West
+              Bengal. I am a 3rd
+              year
+              student from CSE department who has interest in web development and wants to learn more in this
+              field</p>
+            <br><br>
+          </div>
+        </a>
 
-      <a href="/static/12th Marksheet.pdf" target="_blank">
-        <div
-          class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            CLASS 12th
-          </p>
+        <a href="/static/12th Marksheet.pdf" target="_blank">
+          <div
+            class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
+            <p class="text-[150%] font-bold text-[#bef264]">
+              CLASS 12th
+            </p>
 
-          <p class="bg-[#555353] inline-block font-semibold px-[1%] my-[1%]">2019-20</p>
-          <p class="italic font-mono text-[115%]">Vikas Vidyalaya</p>
-          <p class="mb-[0.5%]">Percentage - 87.8</p>
-          <p class="field font-Merienda ">I completed my 12th from CBSE board at Vikas Vidyalaya, Begusarai, Bihar. My
-            main subjects were
-            English, Maths, Physics ,Chemistry and Physical Education.</p>
-          <br><br>
-        </div>
-      </a>
+            <p class="bg-[#555353] inline-block font-semibold px-[1%] my-[1%]">2019-20</p>
+            <p class="italic font-mono text-[115%]">Vikas Vidyalaya</p>
+            <p class="mb-[0.5%]">Percentage - 87.8</p>
+            <p class="field font-Merienda ">I completed my 12th from CBSE board at Vikas Vidyalaya, Begusarai, Bihar. My
+              main subjects were
+              English, Maths, Physics ,Chemistry and Physical Education.</p>
+            <br><br>
+          </div>
+        </a>
 
-      <a href="/static/10th Marksheet.pdf" target="_blank">
-        <div
-          class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            CLASS 10th
-          </p>
+        <a href="/static/10th Marksheet.pdf" target="_blank">
+          <div
+            class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
+            <p class="text-[150%] font-bold text-[#bef264]">
+              CLASS 10th
+            </p>
 
-          <p class="bg-[#555353] inline-block font-semibold px-[1%] my-[1%]">2017-18</p>
-          <p class="italic font-mono text-[115%]">Barauni Refinery DAV Public School</p>
-          <p class="mb-[0.5%]">Percentage - 90.5</p>
-          <p class="field font-Merienda ">I completed my 10th from CBSE board at BR DAV,Public School, Begusarai, Bihar.
-            I had keen
-            interest in
-            Maths, and so I decided to go with my interest in maths.</p>
-          <br><br>
-        </div>
-      </a>
+            <p class="bg-[#555353] inline-block font-semibold px-[1%] my-[1%]">2017-18</p>
+            <p class="italic font-mono text-[115%]">Barauni Refinery DAV Public School</p>
+            <p class="mb-[0.5%]">Percentage - 90.5</p>
+            <p class="field font-Merienda ">I completed my 10th from CBSE board at BR DAV,Public School, Begusarai,
+              Bihar.
+              I had keen
+              interest in
+              Maths, and so I decided to go with my interest in maths.</p>
+            <br><br>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+    <!-- PROJECTS -->
+    <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
+
+      <div>
+        <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Projects</h2>
+        <a href="https://github.com/nikitaasinghh/ChatApp" target="_blank">
+          <div
+            class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
+            <p class="text-[150%] font-bold text-[#bef264]">
+              CHAT APPLICATION
+            </p>
+            <p class="italic font-mono text-[115%]">Using NodeJs and SocketIO</p>
+            <ul class="leading-8 field font-Merienda ">
+              <li><span class="text-base text-[#bef264]">&#9658;</span> It is a real-time chat application
+                using NodeJs and SocketIO through which various users can connect and start their
+                conversation.</li>
+              <li><span class="text-base text-[#bef264]">&#9658;</span> Helps users connect with each other
+                seamlessly in an efficient manner. </li>
+              <li><span class="text-base text-[#bef264]">&#9658;</span> Uses SocketIO for secure connection.
+              </li>
+            </ul>
+            <br>
+          </div>
+        </a>
+
+        <a href="https://nikitaasinghh.github.io/" target="_blank">
+          <div
+            class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
+            <p class="text-[150%] font-bold text-[#bef264]">
+              PERSONAL PORTFOLIO
+            </p>
+            <p class="italic font-mono text-[115%]">Using HTML, TailwindCSS, SCSS</p>
+            <ul class="leading-8 field font-Merienda ">
+              <li><span class="text-base text-[#bef264]">&#9658;</span> A clean and minimalistic, with a focus on
+                showcasing my work in an easy-to-navigate format.
+              <li><span class="text-base text-[#bef264]">&#9658;</span> Used scheme is mostly monochromatic , with the
+                pops of color used to draw attention to the key elements and headings.</li>
+              <li><span class="text-base text-[#bef264]">&#9658;</span> It features a responsive design, a contact form
+                with client-side validation, and an about page which utilizes Tailwind features.</li>
+              </li>
+            </ul>
+            <br>
+          </div>
+        </a>
+      </div>
     </div>
 
-
-  </div>
-  <!-- PROJECTS -->
-  <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
-
-    <div>
-      <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Projects</h2>
-      <a href="https://github.com/nikitaasinghh/ChatApp" target="_blank">
-        <div
-          class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            CHAT APPLICATION
-          </p>
-          <p class="italic font-mono text-[115%]">Using NodeJs and SocketIO</p>
-          <ul class="leading-8 field font-Merienda ">
-            <li><span class="text-base text-[#bef264]">&#9658;</span> It is a real-time chat application
-              using NodeJs and SocketIO through which various users can connect and start their
-              conversation.</li>
-            <li><span class="text-base text-[#bef264]">&#9658;</span> Helps users connect with each other
-              seamlessly in an efficient manner. </li>
-            <li><span class="text-base text-[#bef264]">&#9658;</span> Uses SocketIO for secure connection.
-            </li>
-          </ul>
-          <br>
-        </div>
-      </a>
-
-      <a href="https://nikitaasinghh.github.io/" target="_blank">
-        <div
-          class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            PERSONAL PORTFOLIO
-          </p>
-          <p class="italic font-mono text-[115%]">Using HTML, TailwindCSS, SCSS</p>
-          <ul class="leading-8 field font-Merienda ">
-            <li><span class="text-base text-[#bef264]">&#9658;</span> A clean and minimalistic, with a focus on
-              showcasing my work in an easy-to-navigate format.
-            <li><span class="text-base text-[#bef264]">&#9658;</span> Used scheme is mostly monochromatic , with the
-              pops of color used to draw attention to the key elements and headings.</li>
-            <li><span class="text-base text-[#bef264]">&#9658;</span> It features a responsive design, a contact form
-              with client-side validation, and an about page which utilizes Tailwind features.</li>
-            </li>
-          </ul>
-          <br>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- CERTIFICATES -->
-  <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
-    <div>
-      <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Certificates</h2>
-      <a href="https://coursera.org/share/54c42e0330f96f9be79dce49b59eabaa" target="_blank">
-        <div class="px-[3%] border-[0.5] border-white-400  opacity-[65%] my-[3%]  pt-[3%] transition duration-500 ease-in-out 
+    <!-- CERTIFICATES -->
+    <div class="bg-black text-white h-5/6 w-[86%] m-auto my-20 bg-transparent/[0.75] p-6 rounded-2xl">
+      <div>
+        <h2 class="text-[240%] font-bold mb-[0%] pl-[3%] font-mono">Certificates</h2>
+        <a href="https://coursera.org/share/54c42e0330f96f9be79dce49b59eabaa" target="_blank">
+          <div class="px-[3%] border-[0.5] border-white-400  opacity-[65%] my-[3%]  pt-[3%] transition duration-500 ease-in-out 
             bg-[#212120] hover:bg-[#212120] transform 
             hover:-translate-y-1 hover:scale-[103%] 
             rounded-[10%] p-4 border border-[#212120]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            Responsive Website Basics: Code with HTML, CSS, and JavaScript
-          </p> <br>
-          <p class="field font-Merienda ">Completed Responsive Website Basic from Coursera. Covered frontend Development
-            using HTML,CSS and
-            JavaScript.</p>
-          <br><br>
-        </div>
-      </a>
+            <p class="text-[150%] font-bold text-[#bef264]">
+              Responsive Website Basics: Code with HTML, CSS, and JavaScript
+            </p> <br>
+            <p class="field font-Merienda ">Completed Responsive Website Basic from Coursera. Covered frontend
+              Development
+              using HTML,CSS and
+              JavaScript.</p>
+            <br><br>
+          </div>
+        </a>
 
-      <a href="https://github.com/nikitaasinghh/Certificates" target="_blank">
-        <div class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%]  pt-[3%] transition duration-500 ease-in-out 
+        <a href="https://github.com/nikitaasinghh/Certificates" target="_blank">
+          <div class="px-[3%] border-[0.5] border-white-400 opacity-[65%] my-[3%]  pt-[3%] transition duration-500 ease-in-out 
             bg-[#212120] hover:bg-[#212120] transform 
             hover:-translate-y-1 hover:scale-[103%]
             rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            Web Development BootCamp by ShapeAI
-          </p>
-          <br>
-          <p class="field font-Merienda ">Completed 7-day Bootcamp on basic Web Development by ShapeAI in
-            collaboration with Develop Student Clubs.</p>
-          <br>
-        </div>
-      </a>
+            <p class="text-[150%] font-bold text-[#bef264]">
+              Web Development BootCamp by ShapeAI
+            </p>
+            <br>
+            <p class="field font-Merienda ">Completed 7-day Bootcamp on basic Web Development by ShapeAI in
+              collaboration with Develop Student Clubs.</p>
+            <br>
+          </div>
+        </a>
 
-      <a href="https://coursera.org/share/a040bc5f58568178f18ae74f013dfed4" target="_blank">
-        <div
-          class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
-          <p class="text-[150%] font-bold text-[#bef264]">
-            Responsive Web Design
-          </p><br>
-          <p class="field font-Merienda ">Completed Responsive Web Design course from Coursera. Covered basics of
-            Bootstrap and learned how to make web pages adapt to different screen
-            sizes using responsive grid layout.</p>
-          <br>
-        </div>
-      </a>
+        <a href="https://coursera.org/share/a040bc5f58568178f18ae74f013dfed4" target="_blank">
+          <div
+            class="px-[3%] opacity-[65%] my-[3%] pt-[3%] transition duration-500 ease-in-out bg-[#212120] hover:bg-[#212120] transform hover:-translate-y-1 hover:scale-[103%] rounded-[10%] p-4 border border-[#212120] md:p-[5%]">
+            <p class="text-[150%] font-bold text-[#bef264]">
+              Responsive Web Design
+            </p><br>
+            <p class="field font-Merienda ">Completed Responsive Web Design course from Coursera. Covered basics of
+              Bootstrap and learned how to make web pages adapt to different screen
+              sizes using responsive grid layout.</p>
+            <br>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
 
 
-  <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['CHECK MY RESUME'],
-      typeSpeed: 100,
-    });
-  </script>
-  <script>
-    let j = 0;
-    const navs = document.getElementById("navbar");
-    const icon = document.getElementById("ionicon")
-    function classToggle() {
-      if (navs.classList.contains("md:hidden")) {
-        navs.classList.remove("md:hidden");
-        // icon.classList.remove("vert-move");
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: ['CHECK MY RESUME'],
+        typeSpeed: 100,
+      });
+    </script>
+    <script>
+      let j = 0;
+      const navs = document.getElementById("navbar");
+      const icon = document.getElementById("ionicon")
+      function classToggle() {
+        if (navs.classList.contains("md:hidden")) {
+          navs.classList.remove("md:hidden");
+          // icon.classList.remove("vert-move");
+        }
+        else {
+          navs.classList.add("md:hidden");
+          // icon.classList.add("sm:vert-move");
+        }
+        navs.classList.add("md:flex");
+        navs.classList.add("md:flex-col");
+        console.log("Running")
       }
-      else {
-        navs.classList.add("md:hidden");
-        // icon.classList.add("sm:vert-move");
-      }
-      navs.classList.add("md:flex");
-      navs.classList.add("md:flex-col");
-      console.log("Running")
-    }
-  </script>
-</body>
+    </script>
+  </body>
 
 </html>
